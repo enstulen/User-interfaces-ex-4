@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/personal_info.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/login.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+
+<body>
+    <div class="login__main__container">
+        <form id="form__login" onsubmit="onFormSubmit()">
+            <div class="main__content">
+                <div class="main__content__inputs">
+                    <div class="main__content__input__container">
+                        <p class="main__content__input__header">Username</p>
+                        <input placeholder="johnsmith00" required name="username" class="main__content__input" />
+                    </div>
+                    <div class="main__content__input__container">
+                        <p class="main__content__input__header">Password</p>
+                        <input placeholder="******" type="password" name="password" required class="main__content__input" />
+                    </div>
+                </div>
+                <button class="main__content__login__button">Login</button>
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
