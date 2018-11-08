@@ -1,0 +1,21 @@
+:root {
+  --main-color: #1475e2;
+  --main-color-darker: #0a4990;
+  --secondary-color: #fc1683;
+  --default-shadow: 0 3px 6px rgba(202, 207, 216, 0.3),
+    0 3px 6px rgba(72, 121, 212, 0.2);
+  --main-color-shadow: 0 2px 4px var(--main-color);
+  --default-margin: 10px;
+  --grey-font: rgb(99, 114, 130);
+  --default-padding: 20px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #fcfcfc;
+}

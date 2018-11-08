@@ -1,8 +1,5 @@
-@import './main.css';
+@import 'global.css';
 
-body {
-  background-color: #fcfcfc;
-}
 .login__main__container {
   display: flex;
   background-color: #fcfcfc;

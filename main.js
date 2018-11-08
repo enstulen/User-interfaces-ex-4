@@ -38,54 +38,6 @@ const more_information = {
   }
 };
 
-// Show modal
-function opinionClicked(restaurantName) {
-  var restaurant = more_information[restaurantName];
-
-  var modal = document.getElementById("myModal");
-  modal.style.display = "block";
-
-  var span = document.getElementsByClassName("close")[0];
-  span.onclick = function() {
-    modal.style.display = "none";
-  };
-
-  var modalHeader = document.getElementById("modal__header");
-  var modalImage = document.getElementById("modal__image");
-  var modalContactPerson = document.getElementById("modal__contact__person");
-  var modalPhoneNumber = document.getElementById("modal__phone__number");
-  var modalWebsite = document.getElementById("modal__website");
-  var modalReview = document.getElementById("modal__review");
-  var modalDescription = document.getElementById("modal__description");
-  var modalFoodType = document.getElementById("modal__food_type");
-  var modalPrice = document.getElementById("modal__price");
-
-  modalHeader.innerHTML = restaurant.name;
-  modalImage.src = restaurant.image;
-  modalContactPerson.innerHTML = restaurant.contactName;
-  modalPhoneNumber.innerHTML = restaurant.phoneNumber;
-  modalWebsite.href = restaurant.website;
-  modalWebsite.innerHTML = restaurant.website;
-  modalReview.innerHTML = restaurant.review;
-  modalDescription.innerHTML = restaurant.description;
-  modalFoodType.innerHTML = restaurant.typeOfFood;
-  modalPrice.innerHTML = restaurant.economicClass;
-
-  if (restaurant.economicClass === 3) {
-    modalPrice.innerHTML = "Expensive";
-  } else if (restaurant.economicClass === 2) {
-    modalPrice.innerHTML = "Medium";
-  } else if (restaurant.economicClass === 1) {
-    modalPrice.innerHTML = "Cheap";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-}
-
 $(document).ready(function() {
   updateButtons();
   logoButtonPressed();
@@ -148,44 +100,40 @@ window.addEventListener("login", function(event) {
   }
 });
 
-function logoButtonPressed() {
+function hideEveryPage() {
   var contentRegister = document.getElementById("content__container__register");
   var contentLogin = document.getElementById("content__container__login");
-  var frontpage = document.getElementById("frontpage__container");
+  var frontpage = document.getElementById("content__container__frontpage");
 
-  if (loggedIn()) {
-    frontpage.style.display = "none";
-  } else {
-    contentLogin.style.display = "none";
-    frontpage.style.display = "flex";
-  }
   contentRegister.style.display = "none";
+  contentLogin.style.display = "none";
+  frontpage.style.display = "none";
+}
+
+function showPage(pageID) {
+  hideEveryPage();
+  document.getElementById(pageID).style.display = "flex";
+}
+
+function logoButtonPressed() {
+  if (loggedIn()) {
+    showPage("content__container__frontpage");
+  } else {
+    showPage("content__container__frontpage");
+  }
 }
 
 function loginLogoutButtonPressed() {
   if (loggedIn()) {
     logout();
   } else {
-    var contentRegister = document.getElementById(
-      "content__container__register"
-    );
-    var frontpage = document.getElementById("frontpage__container");
-    var contentLogin = document.getElementById("content__container__login");
-    contentRegister.style.display = "none";
-    contentLogin.style.display = "flex";
-    frontpage.style.display = "none";
+    showPage("content__container__login");
   }
   updateButtons();
 }
 
 function registerButtonPressed() {
-  var contentRegister = document.getElementById("content__container__register");
-  var contentLogin = document.getElementById("content__container__login");
-  var frontpage = document.getElementById("frontpage__container");
-
-  contentLogin.style.display = "none";
-  frontpage.style.display = "none";
-  contentRegister.style.display = "block";
+  showPage("content__container__register");
 }
 
 // Add a new preference

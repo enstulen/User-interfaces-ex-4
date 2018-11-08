@@ -1,79 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Restaurantly</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="style/main.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="main.js"></script>
-  </head>
 
-  <body>
-    <!-- HEADER -->
-    <div class="header__container">
-      <div class="header__logo__container" onclick="logoButtonPressed()">
-        <img class="header__logo" src="images/logo.png" alt="logo" />
-        <h2 class="header__text">Restaurantly</h2>
+<head>
+  <meta charset="utf-8" />
+  <title>Restaurantly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="header__container">
+    <div class="header__logo__container" onclick="logoButtonPressed()">
+      <img class="header__logo" src="images/logo.png" alt="logo" />
+    </div>
+    <div class="header__button__container">
+      <div class="register__button" id="register__button" onclick="registerButtonPressed()">
+        <p>Register</p>
       </div>
-      <div class="header__button__container">
-        <div
-          class="register__button"
-          id="register__button"
-          onclick="registerButtonPressed()"
-        >
-          <p>Register</p>
-        </div>
-        <div
-          class="login__logout__button"
-          id="login__logout__button"
-          onclick="loginLogoutButtonPressed()"
-        >
-          <p>Login</p>
-        </div>
+      <div class="login__logout__button" id="login__logout__button" onclick="loginLogoutButtonPressed()">
+        <p>Login</p>
       </div>
     </div>
-    <!-- CONTENT -->
-    <div class="frontpage__container" id="frontpage__container">
-      <iframe
-        name="frontpage"
-        id="frontpage"
-        src="html/frontpage.html"
-      ></iframe>
-    </div>
-    <div class="content__container__register" id="content__container__register">
-      <iframe name="register" id="register" src="html/register.html"></iframe>
-    </div>
-    <div class="content__container__login" id="content__container__login">
-      <iframe name="login" id="login" src="html/login.html"></iframe>
-    </div>
-    <!-- FOOTER -->
-    <div class="footer__container">
-      <div class="footer__link__container">
-        <div class="footer__link__inner__container">
-          <a class="footer__link" href="https://www.tripadvisor.es"
-            >TripAdvisor</a
-          >
-          <div class="footer__link__seperator"></div>
-        </div>
-        <div class="footer__link__inner__container">
-          <a class="footer__link" href="https://www.yelp.com/">Yelp</a>
-          <div class="footer__link__seperator"></div>
-        </div>
-        <div class="footer__link__inner__container">
-          <a class="footer__link" href="https://www.eltenedor.es">Eltenedor</a>
-        </div>
+  </div>
+  <!-- CONTENT -->
+  <div class="content__container__frontpage" id="content__container__frontpage">
+    <iframe name="frontpage" id="frontpage" src="html/frontpage.html"></iframe>
+  </div>
+  <div class="content__container__register" id="content__container__register">
+    <iframe name="register" id="register" src="html/register.html"></iframe>
+  </div>
+  <div class="content__container__login" id="content__container__login">
+    <iframe name="login" id="login" src="html/login.html"></iframe>
+  </div>
+  <!-- FOOTER -->
+  <div class="footer__container">
+    <div class="footer__link__container">
+      <div class="footer__link__inner__container">
+        <a class="footer__link" href="https://www.tripadvisor.es">TripAdvisor</a>
+        <div class="footer__link__seperator"></div>
       </div>
-      <p class="footer__copyright">Copyright Morten Stulen 2018</p>
+      <div class="footer__link__inner__container">
+        <a class="footer__link" href="https://www.yelp.com/">Yelp</a>
+        <div class="footer__link__seperator"></div>
+      </div>
+      <div class="footer__link__inner__container">
+        <a class="footer__link" href="https://www.eltenedor.es">Eltenedor</a>
+      </div>
     </div>
-  </body>
+    <p class="footer__copyright">Copyright Morten Stulen 2018</p>
+  </div>
+</body>
+
 </html>
