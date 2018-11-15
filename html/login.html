@@ -18,19 +18,21 @@
         <form id="form__login" onsubmit="onFormSubmit()">
             <div class="main__content">
                 <div class="main__content__inputs">
+                    <h1 class="main__content__header">Login</h1>
                     <div class="main__content__input__container">
                         <p class="main__content__input__header">Username</p>
-                        <input placeholder="johnsmith00" required name="username" class="main__content__input" />
+                        <input placeholder="johnsmith00" required name="username" class="default__input login__input" />
                     </div>
                     <div class="main__content__input__container">
                         <p class="main__content__input__header">Password</p>
-                        <input placeholder="******" type="password" name="password" required class="main__content__input" />
+                        <input placeholder="******" type="password" name="password" required class="default__input login__input" />
                     </div>
                 </div>
-                <button class="main__content__login__button">Login</button>
+                <div class="main__content__login__button">
+                    <input type="submit" value="Login" class="main__content__login__submit" />
+                </div>
             </div>
         </form>
-
     </div>
 
 

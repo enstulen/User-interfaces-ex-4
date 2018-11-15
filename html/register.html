@@ -15,66 +15,66 @@
 
 <body>
     <div class="register__main__container">
-        <div class="register__left__container">
+        <div class="main__content">
             <form id="form__register" name="form__register" onsubmit="onFormSubmit()">
-                <h2 class="main__content__header">Account info</h2>
-                <div class="main__content__inputs">
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Username</p>
-                        <input placeholder="johnsmith00" required name="username" class="main__content__input" />
+                <h1 class="main__content__header">Account info</h2>
+                    <div class="main__content__inputs">
+                        <div class="main__content__input__container">
+                            <p class="main__content__input__header">Username</p>
+                            <input placeholder="johnsmith00" required name="username" class="default__input" />
+                        </div>
+                        <div class="main__content__input__container">
+                            <p class="main__content__input__header">Password</p>
+                            <input placeholder="******" type="password" name="password" required class="default__input"
+                                pattern="[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]" />
+                        </div>
                     </div>
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Password (8 characters)</p>
-                        <input placeholder="******" type="password" name="password" required class="main__content__input"
-                            pattern="[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]" />
-                    </div>
-                </div>
-                <h2 class="main__content__header">Personal info</h2>
-                <div class="main__content__inputs">
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">First name</p>
-                        <input placeholder="John" name="firstName" required class="main__content__input" />
-                    </div>
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Last name</p>
-                        <input placeholder="Smith" name="lastName" required class="main__content__input" />
-                    </div>
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Email</p>
-                        <input placeholder="johnsmith@gmail.com" name="email" required class="main__content__input" />
-                    </div>
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Address</p>
-                        <input placeholder="Pine St 34, LA" name="address" required class="main__content__input" />
-                    </div>
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Mobile phone</p>
-                        <input type="number" placeholder="97838492" name="phone" class="main__content__input" />
-                    </div>
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Birthday</p>
-                        <input type="date" name="birthday" required class="main__content__input" />
-                    </div>
-                    <div class="main__content__input__container">
-                        <p class="main__content__input__header">Profile Picture</p>
-                        <input type="file" id="file__input__profilePicture" name="profilePicture" accept="image/*"
-                            class="main__content__input" />
-                    </div>
-                    <div class="main__content__input__container__checkbox">
-                        <input type="checkbox" class="main__content__input" id="terms" />
-                        <label class="label" required for="terms">I have read and accept the Terms of Use</label>
-                    </div>
-                </div>
-                <div class="main__content__buttons">
-                    <button class="main__content__signup__button">Sign up</button>
-                    <button type="button" class="main__content__delete__button" onclick="deleteButtonPressed()">Delete</button>
-                </div>
+                    <h1 class="main__content__header">Personal info</h2>
+                        <div class="main__content__inputs">
+                            <div class="main__content__input__container">
+                                <p class="main__content__input__header">First name</p>
+                                <input placeholder="John" name="firstName" required class="default__input" />
+                            </div>
+                            <div class="main__content__input__container">
+                                <p class="main__content__input__header">Last name</p>
+                                <input placeholder="Smith" name="lastName" required class="default__input" />
+                            </div>
+                            <div class="main__content__input__container">
+                                <p class="main__content__input__header">Email</p>
+                                <input placeholder="johnsmith@gmail.com" name="email" required class="default__input" />
+                            </div>
+                            <div class="main__content__input__container">
+                                <p class="main__content__input__header">Address</p>
+                                <input placeholder="Pine St 34, LA" name="address" required class="default__input" />
+                            </div>
+                            <div class="main__content__input__container">
+                                <p class="main__content__input__header">Mobile phone</p>
+                                <input type="number" placeholder="97838492" name="phone" class="default__input" />
+                            </div>
+                            <div class="main__content__input__container">
+                                <p class="main__content__input__header">Birthday</p>
+                                <input type="date" name="birthday" required class="default__input" />
+                            </div>
+                            <div class="main__content__input__container">
+                                <p class="main__content__input__header">Profile Picture</p>
+                                <input type="file" id="file__input__profilePicture" name="profilePicture" accept="image/*"
+                                    class="default__input" />
+                            </div>
+                            <div class="main__content__bottom__container">
+                                <div class="main__content__input__container__checkbox">
+                                    <input type="checkbox" class="checkbox" id="terms" />
+                                    <label class="label" required for="terms">I have read and accept the Terms of Use</label>
+                                </div>
+                                <div class="main__content__signup__button__container">
+                                    <div class="main__content__signup__button">
+                                        <input type="submit" value="Signup" class="main__content__register__submit" />
+                                    </div>
+                                </div>
+                                <div>
 
+                                </div>
 
             </form>
-        </div>
-        <div class="register__right__container">
-            <img class="register__right__container__image" src="../images/eating.png" />
         </div>
     </div>
 

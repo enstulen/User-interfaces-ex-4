@@ -3,10 +3,6 @@ body {
   background-color: white;
 }
 
-.main__content__input__container {
-  flex: 1;
-  padding: 30px;
-}
 .main__content__input__header {
   margin-bottom: 10px;
 }

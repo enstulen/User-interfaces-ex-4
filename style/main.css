@@ -269,7 +269,7 @@ iframe {
   height: 1000px;
 }
 #login {
-  height: 500px;
+  height: 650px;
 }
 #personal_info {
   height: 900px;
@@ -280,10 +280,6 @@ a {
 }
 #main > iframe:not(:first-child) {
   display: none;
-}
-
-.main__content__header {
-  padding: 30px;
 }
 
 .navbar__image {

@@ -8,6 +8,7 @@
   --default-margin: 10px;
   --grey-font: rgb(99, 114, 130);
   --default-padding: 20px;
+  --gray-border: #DFDFDF;
 }
 
 * {
@@ -18,4 +19,19 @@
 
 body {
   background-color: #fcfcfc;
+}
+
+.default__input {
+  background-color: white;
+  color: var(--grey-font);
+  border-radius: 4px;
+  padding: 10px 10px 10px 10px;
+  border: 1px var(--gray-border) solid;
+  height: 30px;
+  outline: none;
+  font-size: 16px;
+}
+.main__content__input__header {
+  font-weight: bold;
+  font-size: 20px;
 }
