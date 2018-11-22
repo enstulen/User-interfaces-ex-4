@@ -2,8 +2,7 @@
   --main-color: #1475e2;
   --main-color-darker: #0a4990;
   --secondary-color: #fc1683;
-  --default-shadow: 0 3px 6px rgba(202, 207, 216, 0.3),
-    0 3px 6px rgba(72, 121, 212, 0.2);
+  --default-shadow: 0 3px 6px rgba(202, 207, 216, 0.3), 0 3px 6px rgba(72, 121, 212, 0.2);
   --main-color-shadow: 0 2px 4px var(--main-color);
   --default-margin: 10px;
   --grey-font: rgb(99, 114, 130);
@@ -30,8 +29,24 @@ body {
   height: 30px;
   outline: none;
   font-size: 16px;
+  flex: 1;
 }
-.main__content__input__header {
+
+.default__input--fullWidth {
+  width: 98%;
+}
+
+.default__input__header {
   font-weight: bold;
   font-size: 20px;
+}
+
+.default__input__container {
+  flex: 1;
+  padding: 20px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }

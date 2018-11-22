@@ -5,7 +5,6 @@
   <title>Frontpage</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="../style/frontpage.css" />
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
@@ -23,7 +22,82 @@
 </head>
 
 <body>
-  <p>Frontpage</p>
+  <div class="frontpageContainer">
+    <div class="leftContainer">
+      <div class="leftContainer__search">
+        <div class="default__input__container">
+          <p class="default__input__header">City</p>
+          <input placeholder="City" name="city" required class="default__input default__input--fullWidth" />
+        </div>
+        <div class="flex-row">
+          <div class="default__input__container">
+            <p class="default__input__header">From</p>
+            <input placeholder="From" name="from" required class="default__input" />
+          </div>
+          <div class="default__input__container">
+            <p class="default__input__header">To</p>
+            <input placeholder="To" name="to" required class="default__input" />
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="default__input__container">
+            <p class="default__input__header">Rooms</p>
+            <input placeholder="1" name="rooms" required class="default__input" />
+          </div>
+          <div class="default__input__container">
+            <p class="default__input__header">Guests</p>
+            <input placeholder="2" name="guests" required class="default__input" />
+          </div>
+        </div>
+
+
+        <!-- KEYWORDS (taken from previous "preference section") -->
+        <div class="preferences__container">
+          <div class="preferences__header__container">
+            <h3 class="default__input__header">My preferences</h3>
+            <div class="preferences__add__button" onclick="plusButtonPressed()"><img src="../images/icons/plus.png"
+                width="13" height="13" alt="add"></div>
+          </div>
+          <div class="preferences__selections__container" id="preferences__selections__container">
+            <div class="preferences__selection">
+              <span class="preferences__selection__input" contenteditable="true">Weekend</span>
+              <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                alt="preferenes" />
+            </div>
+            <div class="preferences__selection">
+              <span class="preferences__selection__input" contenteditable="true">Friends</span>
+              <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                alt="preferenes" />
+            </div>
+            <div class="preferences__selection">
+              <span class="preferences__selection__input" contenteditable="true">Food</span>
+              <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                alt="preferenes" />
+            </div>
+            <div class="preferences__selection">
+              <span class="preferences__selection__input" contenteditable="true">Quiet</span>
+              <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                alt="preferenes" />
+            </div>
+            <div class="preferences__selection">
+              <span class="preferences__selection__input" contenteditable="true">Quality</span>
+              <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                alt="preferenes" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="rightContainer">
+      <img class="rightContainer__image" src="../images/frontpage/hotel.svg" />
+      <p class="rightContainer__text">Easy and fast bookings and reviews of hotels!</p>
+    </div>
+
+  </div>
+
+
 </body>
 
 </html>

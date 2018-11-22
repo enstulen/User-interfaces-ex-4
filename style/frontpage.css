@@ -1,2 +1,103 @@
 @import "global.css";
+body {
+  background-image: url("../images//frontpage/background.svg");
+}
 
+.frontpageContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.leftContainer {
+  display: flex;
+  flex: 1;
+}
+
+.rightContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightContainer__text {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.leftContainer__search {
+  padding: 20px;
+  width: 70%;
+  box-shadow: var(--default-shadow);
+  margin-top: 40px;
+  background-color: white;
+  margin-left: 50px;
+}
+
+.rightContainer__image {
+  width: 85%;
+}
+
+/* PREFERENCES */
+
+.preferences__container {
+  padding: var(--default-padding);
+}
+
+.preferences__header__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.preferences__selections__container {
+  display: flex;
+  padding: 10px 10px 10px 0px;
+  flex-wrap: wrap;
+}
+
+.preferences__add__button {
+  color: white;
+  background-color: var(--secondary-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--default-shadow);
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.preferences__selection {
+  background-color: var(--main-color);
+  border-radius: 20px;
+  padding: 10px 15px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 15px;
+  margin: var(--default-margin);
+  box-shadow: var(--default-shadow);
+}
+
+.preferences__selection__input {
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.preferences__selection__img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+/* ===== */

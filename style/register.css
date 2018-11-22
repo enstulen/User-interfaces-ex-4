@@ -1,19 +1,21 @@
 @import 'global.css';
-
 .register__main__container {
   display: flex;
   background-color: #fcfcfc;
   justify-content: center;
   align-items: center;
 }
+
 .register__left__container {
   flex: 1;
 }
+
 .register__right__container {
   flex: 1;
   position: relative;
   justify-content: center;
 }
+
 .register__right__container__image {
   width: 100%;
   position: absolute;
@@ -21,9 +23,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .label {
   margin-bottom: 5px;
 }
+
 .main__content {
   margin-top: 50px;
   width: 750px;
@@ -34,24 +38,29 @@
   box-shadow: var(--default-shadow);
   border-radius: 8px;
 }
+
 .main__content__input__container__checkbox {
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
-  border:none;
+  border: none;
 }
+
 .checkbox {
   margin-right: 10px;
 }
+
 .main__content__buttons {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
 }
+
 #file__input__profilePicture {
   width: 670px;
 }
+
 .main__content__header {
   padding: 30px;
   margin-left: -10px;
@@ -72,12 +81,14 @@
   outline: none;
   text-align: center;
 }
+
 .main__content__signup__button__container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .main__content__register__submit {
   background-color: var(--main-color);
   border: none;
@@ -85,14 +96,22 @@
   color: white;
   font-size: 20px;
 }
+
 .main__content__input__container {
   flex: 1;
   padding: 20px;
 }
+
 .main__content__bottom__container {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.main__content__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

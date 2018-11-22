@@ -1,11 +1,11 @@
 @import 'global.css';
-
 .login__main__container {
   display: flex;
   background-color: #fcfcfc;
   justify-content: center;
   align-items: center;
 }
+
 .main__content {
   margin-top: 50px;
   width: 300px;
@@ -16,10 +16,12 @@
   box-shadow: var(--default-shadow);
   border-radius: 8px;
 }
+
 .main__content__inputs {
   display: flex;
   flex-direction: column;
 }
+
 .main__content__input__container {
   flex: 1;
   padding: 20px;
@@ -40,6 +42,7 @@
   outline: none;
   text-align: center;
 }
+
 .main__content__login__submit {
   background-color: var(--main-color);
   border: none;
@@ -47,10 +50,11 @@
   color: white;
   font-size: 20px;
 }
+
 .login__input {
   width: 200px;
 }
-.main__content__header {
-  margin-left: -10px;
 
+.main__content__header {
+  padding: 20px;
 }
