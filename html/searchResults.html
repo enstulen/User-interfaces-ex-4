@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Searchresults</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/frontpage.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/searchResults.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/frontpage.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../jquery/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../jquery/slick/slick-theme.css" />
+
+    <script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="../jquery/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../jquery/search/e-search.js"></script>
+</head>
+
+<body>
+    <div class="frontpageContainer">
+        <div class="leftContainer--smaller">
+            <div class="leftContainer__search--searchResults">
+                <div class="default__input__container">
+                    <p class="default__input__header">City</p>
+                    <input placeholder="City" name="city" required class="default__input default__input--fullWidth" />
+                </div>
+                <div class="flex-row">
+                    <div class="default__input__container">
+                        <p class="default__input__header">From</p>
+                        <input placeholder="From" name="from" required class="default__input--minWidth" />
+                    </div>
+                    <div class="default__input__container">
+                        <p class="default__input__header">To</p>
+                        <input placeholder="To" name="to" required class="default__input--minWidth" />
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <div class="default__input__container">
+                        <p class="default__input__header">Rooms</p>
+                        <input placeholder="1" name="rooms" required class="default__input--minWidth" />
+                    </div>
+                    <div class="default__input__container">
+                        <p class="default__input__header">Guests</p>
+                        <input placeholder="2" name="guests" required class="default__input--minWidth" />
+                    </div>
+                </div>
+
+
+                <!-- KEYWORDS (taken from previous "preference section") -->
+                <div class="preferences__container">
+                    <div class="preferences__header__container">
+                        <h3 class="default__input__header">My preferences</h3>
+                        <div class="preferences__add__button" onclick="plusButtonPressed()"><img src="../images/icons/plus.png"
+                                width="13" height="13" alt="add"></div>
+                    </div>
+                    <div class="preferences__selections__container" id="preferences__selections__container">
+                        <div class="preferences__selection">
+                            <span class="preferences__selection__input" contenteditable="true">Weekend</span>
+                            <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                                alt="preferenes" />
+                        </div>
+                        <div class="preferences__selection">
+                            <span class="preferences__selection__input" contenteditable="true">Friends</span>
+                            <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                                alt="preferenes" />
+                        </div>
+                        <div class="preferences__selection">
+                            <span class="preferences__selection__input" contenteditable="true">Food</span>
+                            <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                                alt="preferenes" />
+                        </div>
+                        <div class="preferences__selection">
+                            <span class="preferences__selection__input" contenteditable="true">Quiet</span>
+                            <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                                alt="preferenes" />
+                        </div>
+                        <div class="preferences__selection">
+                            <span class="preferences__selection__input" contenteditable="true">Quality</span>
+                            <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="../images/icons/cross.png"
+                                alt="preferenes" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="default__input__container">
+                    <div class="leftContainer__search__button" onclick="searchButtonPressed()">
+                        <p>Search</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rightContainer--bigger">
+            <div class="containerItems">
+                <div data-search="eureka" class="container__item">
+                    <img class=" container__item__image" src="https://vignette.wikia.nocookie.net/uncyclopedia/images/9/9d/SuperFancyRestaurant.jpg/revision/latest?cb=20151230201557">
+                    <p class="container__item__text">Eureka</p>
+                </div>
+                <a data-search="theisland" class="container__item">
+                    <img class="container__item__image" src="https://i.pinimg.com/originals/09/80/77/09807760062b95bfbe06384b36c2fbc0.jpg">
+                    <p class="container__item__text">The Island</p>
+                </a>
+                <div data-search="blueprint" class="container__item">
+                    <img class="container__item__image" src="https://cdn-images-1.medium.com/max/2000/1*F3FqMqt4ztx48-ArvHmtcg.png">
+                    <p class="container__item__text">Blueprint</p>
+                </div>
+                <div data-search="theoldsalmon" class="container__item">
+                    <img class="container__item__image" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Munich_-_A_fancy_and_very_kitsch_dinner_table_-_5066.jpg">
+                    <p class="container__item__text">The Old Salmon</p>
+                </div>
+                <div data-search="moonlight" class="container__item">
+                    <img class="container__item__image" src="https://www.urbanchicguides.com/wp-content/uploads/2016/01/Flying-Fish21.jpg">
+                    <p class="container__item__text">Moonlight</p>
+                </div>
+                <div data-search="thepearl" class="container__item">
+                    <img class="container__item__image" src="https://media-cdn.tripadvisor.com/media/photo-s/0e/cc/0a/dc/restaurant-chocolat.jpg">
+                    <p class="container__item__text">The Pearl</p>
+                </div>
+                <div data-search="thebengalwell" class="container__item">
+                    <img class="container__item__image" src="https://www.wien.info/media/images/41993-das-loft-sofitel-so-vienna-19to1.jpeg">
+                    <p class="container__item__text">The Bengal Well</p>
+                </div>
+                <div data-search="blueprint" class="container__item">
+                    <img class="container__item__image" src="https://cdn-images-1.medium.com/max/2000/1*F3FqMqt4ztx48-ArvHmtcg.png">
+                    <p class="container__item__text">Blueprint</p>
+                </div>
+                <div data-search="theoldsalmon" class="container__item">
+                    <img class="container__item__image" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Munich_-_A_fancy_and_very_kitsch_dinner_table_-_5066.jpg">
+                    <p class="container__item__text">The Old Salmon</p>
+                </div>
+                <div data-search="moonlight" class="container__item">
+                    <img class="container__item__image" src="https://www.urbanchicguides.com/wp-content/uploads/2016/01/Flying-Fish21.jpg">
+                    <p class="container__item__text">Moonlight</p>
+                </div>
+                <div data-search="thepearl" class="container__item">
+                    <img class="container__item__image" src="https://media-cdn.tripadvisor.com/media/photo-s/0e/cc/0a/dc/restaurant-chocolat.jpg">
+                    <p class="container__item__text">The Pearl</p>
+                </div>
+                <div data-search="thebengalwell" class="container__item">
+                    <img class="container__item__image" src="https://www.wien.info/media/images/41993-das-loft-sofitel-so-vienna-19to1.jpeg">
+                    <p class="container__item__text">The Bengal Well</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -38,7 +38,7 @@ const more_information = {
   }
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   updateButtons();
   logoButtonPressed();
   updateProfile();
@@ -48,7 +48,7 @@ function loggedIn() {
   var users = JSON.parse(localStorage.getItem("users"));
   if (users) {
     var loggedIn = false;
-    users.forEach(function(user) {
+    users.forEach(function (user) {
       if (user.loggedIn) {
         loggedIn = true;
       }
@@ -60,7 +60,7 @@ function loggedIn() {
 function logout() {
   var users = JSON.parse(localStorage.getItem("users"));
   if (users) {
-    users.map(function(user) {
+    users.map(function (user) {
       if (user.loggedIn) {
         var index = users.indexOf(user);
         if (index > -1) {
@@ -88,26 +88,35 @@ function updateButtons() {
   }
 }
 
-window.addEventListener("message", function(event) {
-  logoButtonPressed();
-  window.location.reload(true);
+window.addEventListener("message", function (event) {
+
+  if (event.data == "searchButtonPressed") {
+    showPage("content__container__searchResults");
+  } else {
+    logoButtonPressed();
+    window.location.reload(true);
+  }
 });
 
-window.addEventListener("login", function(event) {
+window.addEventListener("login", function (event) {
   if (loggedIn()) {
     logoButtonPressed();
     window.location.reload(true);
   }
 });
 
+
 function hideEveryPage() {
   var contentRegister = document.getElementById("content__container__register");
   var contentLogin = document.getElementById("content__container__login");
   var frontpage = document.getElementById("content__container__frontpage");
+  var searchResults = document.getElementById("content__container__searchResults");
 
   contentRegister.style.display = "none";
   contentLogin.style.display = "none";
   frontpage.style.display = "none";
+  searchResults.style.display = "none";
+
 }
 
 function showPage(pageID) {
@@ -167,7 +176,7 @@ function updateProfile() {
 
   var users = JSON.parse(localStorage.getItem("users"));
   if (users) {
-    users.forEach(function(user) {
+    users.forEach(function (user) {
       if (user.loggedIn) {
         if (user.image) {
           image.src = user.image;

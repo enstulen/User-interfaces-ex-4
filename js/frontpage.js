@@ -1,12 +1,3 @@
-$(document).ready(function () {
-  $(".slideshow").slick({
-    autoplay: true,
-    dots: true,
-    arrows: true,
-    centerMode: true
-  });
-  $(".search__field").search();
-});
 
 // Add a new preference
 function plusButtonPressed() {
@@ -29,4 +20,8 @@ function deletePreferenceButtonPressed(element) {
   var container = document.getElementById("preferences__selections__container");
   var parent = element.parentNode;
   container.removeChild(parent);
+}
+
+function searchButtonPressed() {
+  window.parent.postMessage('searchButtonPressed', '*');
 }

@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: row;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .leftContainer {
@@ -30,11 +31,27 @@ body {
 
 .leftContainer__search {
   padding: 20px;
-  width: 70%;
+  max-width: 450px;
   box-shadow: var(--default-shadow);
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: white;
   margin-left: 50px;
+}
+
+.leftContainer__search__button {
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 85%;
+  padding: 20px 30px 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  margin-right: 30px
 }
 
 .rightContainer__image {

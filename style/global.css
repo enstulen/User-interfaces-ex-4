@@ -32,6 +32,20 @@ body {
   flex: 1;
 }
 
+.default__input--minWidth {
+  background-color: white;
+  color: var(--grey-font);
+  border-radius: 4px;
+  padding: 10px 10px 10px 10px;
+  border: 1px var(--gray-border) solid;
+  height: 30px;
+  outline: none;
+  font-size: 16px;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
 .default__input--fullWidth {
   width: 98%;
 }
