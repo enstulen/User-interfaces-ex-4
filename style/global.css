@@ -3,6 +3,7 @@
   --main-color-darker: #0a4990;
   --secondary-color: #fc1683;
   --default-shadow: 0 3px 6px rgba(202, 207, 216, 0.3), 0 3px 6px rgba(72, 121, 212, 0.2);
+  --default-shadow-hover: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   --main-color-shadow: 0 2px 4px var(--main-color);
   --default-margin: 10px;
   --grey-font: rgb(99, 114, 130);
