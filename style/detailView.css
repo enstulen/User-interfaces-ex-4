@@ -1,0 +1,102 @@
+@import "global.css";
+.detailView__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailView_booking {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.detailView_booking__left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.detailView_booking__left__image {
+    width: 100%;
+}
+
+.detailView_booking__left__headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0px 20px 0px;
+}
+
+.detailView_booking__left__subtext {
+    color: var(--grey-font);
+}
+
+.detailView_booking__right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.detailView_booking__right__heading {
+    padding: 20px;
+}
+
+.booking__button {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.review__button {
+    width: 250px;
+    margin: 20px 0px 0px 20px;
+}
+
+.textarea {
+    height: 100px;
+}
+
+.detailView__reviews__score {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailView__reviews__review {
+    margin-bottom: 20px;
+}
+
+.detailView__reviews__header {
+    padding: 20px;
+}
+
+#share {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.jssocials-share-link {
+    border-radius: 50%;
+}
+
+.detailView__reviews__review__image {
+    flex: 1;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.detailView__reviews__review__text {
+    flex: 5;
+    padding: 10px;
+}
+
+.detailView__reviews__review__subtext {
+    color: var(--grey-font);
+}
+
+.detailView__reviews__review__score {
+    flex: 1;
+    padding: 10px;
+}

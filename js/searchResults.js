@@ -1,10 +1,10 @@
 const hotels = [
     {
-        name: "NH Hotel",
+        name: "NH Hotel!",
         city: "oslo",
-        image: "../images/restaurants/restaurant1.jpg",
-        price: 350,
-        description: "This hotel can be found everywhere across the city center. It is a great hotel for both couples and families as they provide different rooms. The spa and the pool next to the hotel ...",
+        image: "../images/restaurants/restaurant2.jpg",
+        price: 400,
+        description: "!This hotel can be found everywhere across the city center. It is a great hotel for both couples and families as they provide different rooms. The spa and the pool next to the hotel ...",
         reviews: [{
             header: "Header",
             text: "Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve",
@@ -12,7 +12,7 @@ const hotels = [
         }]
     },
     {
-        name: "NH Hotel",
+        name: "NH Hotel2",
         city: "madrid",
         image: "../images/restaurants/restaurant1.jpg",
         price: 350,
@@ -98,7 +98,8 @@ const hotels = [
 ];
 
 function containerItemPressed(i) {
-    console.log(i);
+    localStorage.setItem("currentHotel", JSON.stringify(hotels[i]));
+    window.parent.postMessage('goToDetailView', '*');
 };
 
 $(document).ready(function () {

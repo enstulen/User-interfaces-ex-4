@@ -318,6 +318,10 @@ iframe {
   height: 720px;
 }
 
+#detailView {
+  height: 1500px;
+}
+
 a {
   text-decoration: none;
   color: black;

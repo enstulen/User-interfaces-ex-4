@@ -1,43 +1,3 @@
-//Economic class: 1 = Cheap, 2 = Middle, 3 = Expensive
-const more_information = {
-  cornerBear: {
-    name: "The Corner Bear",
-    image: "./images/restaurants/restaurant1.jpg",
-    contactName: "Carlos Johnson",
-    website: "http://www.cornerbear.com/",
-    phoneNumber: 860730589,
-    description: "Jalla",
-    typeOfFood: ["Fish", "Lobster"],
-    economicClass: 1,
-    review:
-      "Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10"
-  },
-  parlour: {
-    name: "The Parlour",
-    image: "./images/restaurants/restaurant2.jpg",
-    contactName: "George Read",
-    website: "http://www.Theparlour.com/",
-    phoneNumber: 234980234,
-    description: "Fast",
-    typeOfFood: ["Meat", "Cereals"],
-    economicClass: 1,
-    review:
-      "Very nice staff. The food was OK, but the service was amazing. The decorations were also on point. I would still recommend a trip to this restaurant. I visited this back in 2013, but I bet it is still the same as it was then. 5/10"
-  },
-  frenchClove: {
-    name: "The French Clove",
-    image: "./images/restaurants/restaurant3.jpg",
-    contactName: "Trinette Moquin",
-    website: "http://www.frenchClove.com/",
-    phoneNumber: 740770465,
-    description: "Serius",
-    typeOfFood: ["Salads", "Sandwiches"],
-    economicClass: 3,
-    review:
-      "Excusite food. Very helpful and kind staff. The wine, although expensive, is amazing. Would love to go again. 9/10"
-  }
-};
-
 $(document).ready(function () {
   updateButtons();
   logoButtonPressed();
@@ -89,9 +49,11 @@ function updateButtons() {
 }
 
 window.addEventListener("message", function (event) {
-
   if (event.data == "searchButtonPressed") {
     showPage("content__container__searchResults");
+  } else if (event.data == "goToDetailView") {
+    showPage("content__container__detailView");
+    showHotel();
   } else {
     logoButtonPressed();
     window.location.reload(true);
@@ -111,12 +73,13 @@ function hideEveryPage() {
   var contentLogin = document.getElementById("content__container__login");
   var frontpage = document.getElementById("content__container__frontpage");
   var searchResults = document.getElementById("content__container__searchResults");
+  var detailView = document.getElementById("content__container__detailView");
 
   contentRegister.style.display = "none";
   contentLogin.style.display = "none";
   frontpage.style.display = "none";
   searchResults.style.display = "none";
-
+  detailView.style.display = "none";
 }
 
 function showPage(pageID) {

@@ -17,7 +17,7 @@ body {
     overflow: scroll;
     height: 680px;
     min-width: 400px;
-    padding-top: 10px;
+    padding-top: 150px;
 }
 
 .leftContainer__search--searchResults {
