@@ -43,12 +43,12 @@
 }
 
 .booking__button {
-    width: 250px;
+    max-width: 250px;
     margin-left: 20px;
 }
 
 .review__button {
-    width: 250px;
+    max-width: 250px;
     margin: 20px 0px 0px 20px;
 }
 

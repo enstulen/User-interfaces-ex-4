@@ -8,7 +8,12 @@ const hotels = [
         reviews: [{
             header: "Header",
             text: "Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve",
-            score: 5
+            score: 5,
+        },
+        {
+            header: "Header2",
+            text: "Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve",
+            score: 6
         }]
     },
     {
@@ -98,7 +103,11 @@ const hotels = [
 ];
 
 function containerItemPressed(i) {
-    localStorage.setItem("currentHotel", JSON.stringify(hotels[i]));
+    //if (localStorage.getItem("hotels") == null) {
+    localStorage.setItem("hotels", JSON.stringify(hotels));
+    //}
+    var hotelsLocalStorage = JSON.parse(localStorage.getItem("hotels"));
+    localStorage.setItem("currentHotel", JSON.stringify(hotelsLocalStorage[i]));
     window.parent.postMessage('goToDetailView', '*');
 };
 
