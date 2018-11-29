@@ -71,22 +71,25 @@
         <div class="default__container">
             <div class="detailView__reviews flex-column">
                 <h1 class="detailView__reviews__header">Reviews</h1>
-                <div class="default__input__container">
-                    <p class="default__input__header">Title</p>
-                    <input placeholder="Title" name="title" required class="default__input default__input--fullWidth" />
-                </div>
-                <div class="default__input__container">
-                    <p class="default__input__header">Review</p>
-                    <textarea placeholder="Review" name="review" required class="default__input default__input--fullWidth textarea"></textarea>
-                </div>
-                <div class="detailView__reviews__score">
+                <div class="detailView__reviews__inputs flex-column">
+
                     <div class="default__input__container">
-                        <p class="default__input__header">Score</p>
-                        <input placeholder="Score" name="score" required class="default__input default__input--fullWidth" />
+                        <p class="default__input__header">Title</p>
+                        <input placeholder="Title" id="reviewTitle" name="title" required class="default__input default__input--fullWidth" />
                     </div>
                     <div class="default__input__container">
-                        <div class="default__button review__button">
-                            <p>Submit</p>
+                        <p class="default__input__header">Review</p>
+                        <textarea placeholder="Review" id="reviewText" name="review" required class="default__input default__input--fullWidth textarea"></textarea>
+                    </div>
+                    <div class="detailView__reviews__score">
+                        <div class="default__input__container">
+                            <p class="default__input__header">Score</p>
+                            <input placeholder="Score" id="reviewScore" name="score" required class="default__input default__input--fullWidth" />
+                        </div>
+                        <div class="default__input__container">
+                            <div class="default__button review__button" onclick="submitReviewButtonPressed()">
+                                <p>Submit</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,7 +108,7 @@
         </div>
 
         <!-- SHARE -->
-        <div class="default__container">
+        <div class="default__container shareContainer">
             <h1 class="detailView__reviews__header">Share</h1>
             <div id="share" />
         </div>

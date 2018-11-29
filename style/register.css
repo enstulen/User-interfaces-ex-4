@@ -71,15 +71,13 @@
   border: none;
   color: white;
   cursor: pointer;
-  width: 160px;
-  padding: 20px 30px 20px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
   margin-bottom: 20px;
   outline: none;
   text-align: center;
+  border-radius: 8px;
 }
 
 .main__content__signup__button__container {
@@ -95,6 +93,9 @@
   outline: none;
   color: white;
   font-size: 20px;
+  padding: 20px 50px 20px 50px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .main__content__input__container {

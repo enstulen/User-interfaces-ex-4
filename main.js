@@ -132,29 +132,29 @@ function deletePreferenceButtonPressed(element) {
 }
 
 function updateProfile() {
-  var name = document.getElementById("profile__header");
-  var text = document.getElementById("personal__information__text");
-  var image = document.getElementById("profile__img");
-  var image2 = document.getElementById("profile__img2");
+  // var name = document.getElementById("profile__header");
+  // var text = document.getElementById("personal__information__text");
+  // var image = document.getElementById("profile__img");
+  // var image2 = document.getElementById("profile__img2");
 
-  var users = JSON.parse(localStorage.getItem("users"));
-  if (users) {
-    users.forEach(function (user) {
-      if (user.loggedIn) {
-        if (user.image) {
-          image.src = user.image;
-          image2.src = user.image;
-        } else {
-          image.src = "images/profile.svg";
-          image2.src = "images/profile.svg";
-        }
-        name.innerHTML = user.firstName + " " + user.lastName;
-        text.innerHTML =
-          user.firstName +
-          " " +
-          user.lastName +
-          " is a renowned restaurant reviewer from Spain. His favorite restaurants are McDonald's and Burger King. Member since 2015.";
-      }
-    });
-  }
+  // var users = JSON.parse(localStorage.getItem("users"));
+  // if (users) {
+  //   users.forEach(function (user) {
+  //     if (user.loggedIn) {
+  //       if (user.image) {
+  //         image.src = user.image;
+  //         image2.src = user.image;
+  //       } else {
+  //         image.src = "images/profile.svg";
+  //         image2.src = "images/profile.svg";
+  //       }
+  //       name.innerHTML = user.firstName + " " + user.lastName;
+  //       text.innerHTML =
+  //         user.firstName +
+  //         " " +
+  //         user.lastName +
+  //         " is a renowned restaurant reviewer from Spain. His favorite restaurants are McDonald's and Burger King. Member since 2015.";
+  //     }
+  //   });
+  // }
 }

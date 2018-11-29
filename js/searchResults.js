@@ -103,10 +103,11 @@ const hotels = [
 ];
 
 function containerItemPressed(i) {
-    //if (localStorage.getItem("hotels") == null) {
-    localStorage.setItem("hotels", JSON.stringify(hotels));
-    //}
+    if (localStorage.getItem("hotels") == null) {
+        localStorage.setItem("hotels", JSON.stringify(hotels));
+    }
     var hotelsLocalStorage = JSON.parse(localStorage.getItem("hotels"));
+    localStorage.setItem("currentHotelIndex", i);
     localStorage.setItem("currentHotel", JSON.stringify(hotelsLocalStorage[i]));
     window.parent.postMessage('goToDetailView', '*');
 };
