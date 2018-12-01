@@ -322,6 +322,10 @@ iframe {
   height: 2000px;
 }
 
+#profile {
+  height: 1500px;
+}
+
 a {
   text-decoration: none;
   color: black;

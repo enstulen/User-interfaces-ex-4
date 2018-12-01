@@ -1,9 +1,8 @@
 @import 'global.css';
 .register__main__container {
   display: flex;
+  flex-direction: column;
   background-color: #fcfcfc;
-  justify-content: center;
-  align-items: center;
 }
 
 .register__left__container {

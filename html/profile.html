@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-    <title>Register</title>
+    <title>Profile</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../style/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/profile.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../style/register.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../js/register.js"></script>
+    <script src="../js/profile.js"></script>
 </head>
 
 <body>
     <div class="register__main__container">
-        <div class="main__content">
+        <div class="default__container">
             <form id="form__register" name="form__register" onsubmit="onFormSubmit()">
                 <h1 class="main__content__header">Account info</h1>
                 <div class="main__content__inputs">
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Username</p>
                         <input placeholder="johnsmith00" required name="username" class="default__input" />
                     </div>
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Password</p>
                         <input placeholder="******" type="password" name="password" required class="default__input"
                             pattern="[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]" />
@@ -30,51 +30,48 @@
                 </div>
                 <h1 class="main__content__header">Personal info</h1>
                 <div class="main__content__inputs">
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">First name</p>
                         <input placeholder="John" name="firstName" required class="default__input" />
                     </div>
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Last name</p>
                         <input placeholder="Smith" name="lastName" required class="default__input" />
                     </div>
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Email</p>
                         <input placeholder="johnsmith@gmail.com" name="email" required class="default__input" />
                     </div>
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Address</p>
                         <input placeholder="Pine St 34, LA" name="address" required class="default__input" />
                     </div>
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Mobile phone</p>
                         <input type="number" placeholder="97838492" name="phone" class="default__input" />
                     </div>
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Birthday</p>
                         <input type="date" name="birthday" required class="default__input" />
                     </div>
-                    <div class="main__content__input__container">
+                    <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Profile Picture</p>
                         <input type="file" id="file__input__profilePicture" name="profilePicture" accept="image/*"
                             class="default__input" />
                     </div>
-                    <div class="main__content__bottom__container">
-                        <div class="main__content__input__container__checkbox">
-                            <input type="checkbox" class="checkbox" id="terms" />
-                            <label class="label" required for="terms">I have read and accept the Terms of Use</label>
-                        </div>
-                        <div class="main__content__signup__button__container">
-                            <div class="main__content__signup__button">
-                                <input type="submit" value="Signup" class="main__content__register__submit" />
-                            </div>
+                    <div class="main__content__input__container--noFlex">
+                        <div class="main__content__save__button">
+                            <input type="submit" value="Save" class="main__content__register__submit" />
                         </div>
                     </div>
                 </div>
             </form>
         </div>
+        <div class="default__container">
+            <h1 class="main__content__header">Favorites</h1>
+            <div class="containerItems" />
+        </div>
     </div>
-
 
 </body>
 

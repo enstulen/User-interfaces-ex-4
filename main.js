@@ -38,14 +38,24 @@ function updateButtons() {
   if (loggedIn()) {
     var registerButton = document.getElementById("register__button");
     var loginLogoutButton = document.getElementById("login__logout__button");
+    var profileButton = document.getElementById("profile__button");
+
+    profileButton.style.display = "block";
     registerButton.style.display = "none";
     loginLogoutButton.innerHTML = "Logout";
   } else {
     var registerButton = document.getElementById("register__button");
     var loginLogoutButton = document.getElementById("login__logout__button");
+    var profileButton = document.getElementById("profile__button");
+
+    profileButton.style.display = "none";
     registerButton.style.display = "block";
     loginLogoutButton.innerHTML = "Login";
   }
+}
+
+function profileButtonPressed() {
+  showPage("content__container__profile");
 }
 
 window.addEventListener("message", function (event) {
@@ -74,12 +84,15 @@ function hideEveryPage() {
   var frontpage = document.getElementById("content__container__frontpage");
   var searchResults = document.getElementById("content__container__searchResults");
   var detailView = document.getElementById("content__container__detailView");
+  var profile = document.getElementById("content__container__profile");
+
 
   contentRegister.style.display = "none";
   contentLogin.style.display = "none";
   frontpage.style.display = "none";
   searchResults.style.display = "none";
   detailView.style.display = "none";
+  profile.style.display = "none";
 }
 
 function showPage(pageID) {
@@ -132,6 +145,7 @@ function deletePreferenceButtonPressed(element) {
 }
 
 function updateProfile() {
+
   // var name = document.getElementById("profile__header");
   // var text = document.getElementById("personal__information__text");
   // var image = document.getElementById("profile__img");

@@ -1,0 +1,18 @@
+.main__content__input__container--noFlex {
+    padding: 20px;
+}
+
+.main__content__save__button {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    outline: none;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 15px;
+}
