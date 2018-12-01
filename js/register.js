@@ -1,17 +1,18 @@
 function onFormSubmit() {
   var user = $("#form__register")
     .serializeArray()
-    .reduce(function(obj, item) {
+    .reduce(function (obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
 
   user.loggedIn = true;
+  user.favorites = []
 
   var pic = document.getElementById("file__input__profilePicture").files[0];
 
   var reader = new FileReader();
-  reader.onload = function(e) {
+  reader.onload = function (e) {
     var imgURL = reader.result;
     user.image = imgURL;
     saveUser(user);

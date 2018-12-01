@@ -56,6 +56,7 @@ function updateButtons() {
 
 function profileButtonPressed() {
   showPage("content__container__profile");
+  updateFavorites();
 }
 
 window.addEventListener("message", function (event) {

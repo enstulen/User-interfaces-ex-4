@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../style/profile.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../style/register.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/searchResults.css" />
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/profile.js"></script>
@@ -32,32 +34,27 @@
                 <div class="main__content__inputs">
                     <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">First name</p>
-                        <input placeholder="John" name="firstName" required class="default__input" />
+                        <input id="personal_info_first_name" placeholder="John" name="firstName" required class="default__input" />
                     </div>
                     <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Last name</p>
-                        <input placeholder="Smith" name="lastName" required class="default__input" />
+                        <input id="personal_info_last_name" placeholder="Smith" name="lastName" required class="default__input" />
                     </div>
                     <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Email</p>
-                        <input placeholder="johnsmith@gmail.com" name="email" required class="default__input" />
+                        <input id="personal_info_email" placeholder="johnsmith@gmail.com" name="email" required class="default__input" />
                     </div>
                     <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Address</p>
-                        <input placeholder="Pine St 34, LA" name="address" required class="default__input" />
+                        <input id="personal_info_address" placeholder="Pine St 34, LA" name="address" required class="default__input" />
                     </div>
                     <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Mobile phone</p>
-                        <input type="number" placeholder="97838492" name="phone" class="default__input" />
+                        <input id="personal_info_phone" type="number" placeholder="97838492" name="phone" class="default__input" />
                     </div>
                     <div class="main__content__input__container--noFlex">
                         <p class="default__input__header">Birthday</p>
-                        <input type="date" name="birthday" required class="default__input" />
-                    </div>
-                    <div class="main__content__input__container--noFlex">
-                        <p class="default__input__header">Profile Picture</p>
-                        <input type="file" id="file__input__profilePicture" name="profilePicture" accept="image/*"
-                            class="default__input" />
+                        <input id="personal_info_birthday" type="date" name="birthday" required class="default__input" />
                     </div>
                     <div class="main__content__input__container--noFlex">
                         <div class="main__content__save__button">
@@ -69,7 +66,9 @@
         </div>
         <div class="default__container">
             <h1 class="main__content__header">Favorites</h1>
-            <div class="containerItems" />
+            <div class="main__content__favorites">
+                <div class="containerItems" />
+            </div>
         </div>
     </div>
 
