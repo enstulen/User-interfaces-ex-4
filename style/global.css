@@ -80,6 +80,7 @@ body {
   box-shadow: var(--default-shadow);
   padding: 20px;
   margin: 20px;
+  position: relative;
 }
 
 .default__button {

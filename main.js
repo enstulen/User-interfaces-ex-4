@@ -65,6 +65,8 @@ window.addEventListener("message", function (event) {
   } else if (event.data == "goToDetailView") {
     showPage("content__container__detailView");
     showHotel();
+  } else if (event.data == "exitButtonPressed") {
+    showPage("content__container__searchResults");
   } else {
     logoButtonPressed();
     window.location.reload(true);
@@ -86,7 +88,9 @@ function hideEveryPage() {
   var searchResults = document.getElementById("content__container__searchResults");
   var detailView = document.getElementById("content__container__detailView");
   var profile = document.getElementById("content__container__profile");
-
+  var aboutUs = document.getElementById("content__container__aboutUs");
+  var help = document.getElementById("content__container__help");
+  var policies = document.getElementById("content__container__policies");
 
   contentRegister.style.display = "none";
   contentLogin.style.display = "none";
@@ -94,6 +98,10 @@ function hideEveryPage() {
   searchResults.style.display = "none";
   detailView.style.display = "none";
   profile.style.display = "none";
+  aboutUs.style.display = "none";
+  help.style.display = "none";
+  policies.style.display = "none";
+
 }
 
 function showPage(pageID) {
@@ -120,6 +128,18 @@ function loginLogoutButtonPressed() {
 
 function registerButtonPressed() {
   showPage("content__container__register");
+}
+
+function policyButtonPressed() {
+  showPage("content__container__policies");
+}
+
+function helpButtonPressed() {
+  showPage("content__container__help");
+}
+
+function aboutButtonPressed() {
+  showPage("content__container__aboutUs");
 }
 
 // Add a new preference

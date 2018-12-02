@@ -29,6 +29,10 @@ function showHotel() {
     }
 }
 
+function exitButtonPressed() {
+    window.parent.postMessage('exitButtonPressed', '*');
+}
+
 function submitReviewButtonPressed() {
     var currentHotelIndex = JSON.parse(localStorage.getItem("currentHotelIndex"));
     var hotelsLocalStorage = JSON.parse(localStorage.getItem("hotels"));

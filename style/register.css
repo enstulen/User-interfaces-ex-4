@@ -5,6 +5,10 @@
   background-color: #fcfcfc;
 }
 
+.center {
+  align-items: center;
+}
+
 .register__left__container {
   flex: 1;
 }
