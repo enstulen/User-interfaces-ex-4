@@ -33,6 +33,35 @@ function exitButtonPressed() {
     window.parent.postMessage('exitButtonPressed', '*');
 }
 
+// Show modal
+function bookingButtonClicked() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    var modalHeader = document.getElementById("modal__header");
+    var modalImage = document.getElementById("modal__image");
+    var modalContactPerson = document.getElementById("modal__contact__person");
+    var modalPhoneNumber = document.getElementById("modal__phone__number");
+
+    var currentHotel = JSON.parse(localStorage.getItem("currentHotel"));
+
+    modalHeader.innerHTML = "Booking complete!";
+    modalImage.src = currentHotel.image;
+    modalContactPerson.innerHTML = currentHotel.name;
+    modalPhoneNumber.innerHTML = currentHotel.description;
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}
+
 function submitReviewButtonPressed() {
     var currentHotelIndex = JSON.parse(localStorage.getItem("currentHotelIndex"));
     var hotelsLocalStorage = JSON.parse(localStorage.getItem("hotels"));

@@ -42,11 +42,11 @@
                         <div class="flex-row">
                             <div class="default__input__container">
                                 <p class="default__input__header">From</p>
-                                <input placeholder="From" name="from" required class="default__input--minWidth" />
+                                <input type="date" placeholder="From" name="from" required class="default__input--minWidth" />
                             </div>
                             <div class="default__input__container">
                                 <p class="default__input__header">To</p>
-                                <input placeholder="To" name="to" required class="default__input--minWidth" />
+                                <input type="date" placeholder="To" name="to" required class="default__input--minWidth" />
                             </div>
                         </div>
                         <div class="flex-row">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="default__input__container--noPadding paddingLeft">
-                        <div class="default__button booking__button">
+                        <div class="default__button booking__button" onclick="bookingButtonClicked()">
                             <p>Book now</p>
                         </div>
                     </div>
@@ -116,6 +116,34 @@
             <div id="share" />
         </div>
 
+
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="modal__header">Modal Header</h2>
+            </div>
+            <div class="modal__body">
+
+                <div class="modal__body__left">
+                    <h2 class="modal__body__left__header">Booking info</h2>
+                    <div class="modal__body__left__content">
+                        <h3><b>Name</b></h3>
+                        <p class="modal__body__text" id="modal__contact__person" />
+                        <h3><b>Description</b></h3>
+                        <p class="modal__body__text" id="modal__phone__number" />
+                    </div>
+                </div>
+                <div class="modal__body__right">
+                    <img id="modal__image" />
+                </div>
+
+
+            </div>
+        </div>
 
     </div>
 
