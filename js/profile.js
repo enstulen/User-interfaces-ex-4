@@ -1,8 +1,10 @@
+//Run updateFields() when window loads
 window.onload = function () {
     updateFields();
-    //updateFavorites();
 };
 
+//Form submit on updating user
+// Localstorage is updated and then an alert is shown
 function onFormSubmit() {
     var user = $('#form__register')
         .serializeArray()
@@ -30,6 +32,7 @@ function onFormSubmit() {
 
     alert('Updated!');
 }
+//Updating fields for user based on user in localstorage
 function updateFields() {
     var firstName = document.getElementById('personal_info_first_name');
     var lastName = document.getElementById('personal_info_last_name');
@@ -52,7 +55,7 @@ function updateFields() {
         });
     }
 }
-
+//Updating favorites based on localstorage
 function updateFavorites() {
     var hotelsLocalStorage = JSON.parse(localStorage.getItem("hotels"));
     $("#profile").contents().find(".containerItems").empty()
@@ -60,8 +63,6 @@ function updateFavorites() {
     for (i = 0; i < hotelsLocalStorage.length; i++) {
 
         var image = hotelsLocalStorage[i].image;
-        var starImage = '../images/icons/star.png';
-        var starImageFilled = '../images/icons/star_filled.png';
         var name = hotelsLocalStorage[i].name;
         var price = hotelsLocalStorage[i].price;
         var description = hotelsLocalStorage[i].description;
@@ -71,7 +72,7 @@ function updateFavorites() {
         }
     }
 }
-
+// Check if one of the users in localstorage is logged in
 function loggedIn() {
     var users = JSON.parse(localStorage.getItem("users"));
     if (users) {
@@ -84,7 +85,7 @@ function loggedIn() {
     }
     return loggedIn;
 }
-
+//Get the current logged in user
 function getUser() {
     var users = JSON.parse(localStorage.getItem("users"));
     if (users) {
@@ -98,6 +99,7 @@ function getUser() {
     return returnUser;
 }
 
+//Check if "i" is favorite for the currently logged in user
 function isFavorite(i) {
     if (loggedIn()) {
         var user = getUser();
@@ -109,7 +111,7 @@ function isFavorite(i) {
         return false
     }
 }
-
+//Go to the specific hotel
 function containerItemPressed(e, i) {
     e = e || window.event;
     var target = e.target || e.srcElement;
@@ -119,42 +121,3 @@ function containerItemPressed(e, i) {
         window.parent.postMessage('goToDetailView', '*');
     }
 };
-
-function favoriteContainerPressed(element, i) {
-    changeFavoriteImage(element);
-
-    var users = JSON.parse(localStorage.getItem('users'));
-    var updatedUsers = users.map(function (userMap) {
-        if (userMap.loggedIn) {
-            var newUser = Object.assign({}, userMap);
-            if (newUser.favorites.includes(i)) {
-                var index = newUser.favorites.indexOf(i);
-                if (index > -1) {
-                    newUser.favorites.splice(index, 1);
-                }
-            } else {
-                newUser.favorites.push(i);
-            }
-            return newUser;
-        } else {
-            return userMap;
-        }
-    });
-    localStorage.setItem('users', JSON.stringify(updatedUsers));
-}
-
-function hover(element) {
-    changeFavoriteImage(element);
-}
-
-function unhover(element) {
-    changeFavoriteImage(element);
-}
-
-function changeFavoriteImage(element) {
-    if (element.getElementsByTagName('img')[0].getAttribute('src') === '../images/icons/star.png') {
-        element.getElementsByTagName('img')[0].setAttribute('src', '../images/icons/star_filled.png');
-    } else {
-        element.getElementsByTagName('img')[0].setAttribute('src', '../images/icons/star.png');
-    }
-}

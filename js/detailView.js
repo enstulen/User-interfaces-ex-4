@@ -1,3 +1,4 @@
+//Gets the currentHotel from localStorage and present it in detailView, replacing the content there.
 function showHotel() {
     var currentHotel = JSON.parse(localStorage.getItem("currentHotel"));
 
@@ -28,12 +29,12 @@ function showHotel() {
         });
     }
 }
-
+//Clicking exit button to go back to searchResults
 function exitButtonPressed() {
     window.parent.postMessage('exitButtonPressed', '*');
 }
 
-// Show modal
+// Show modal for booking confirmed
 function bookingButtonClicked() {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -61,7 +62,7 @@ function bookingButtonClicked() {
         }
     };
 }
-
+// Submit a review and update both the localStorage and the HTML content through JQuery
 function submitReviewButtonPressed() {
     var currentHotelIndex = JSON.parse(localStorage.getItem("currentHotelIndex"));
     var hotelsLocalStorage = JSON.parse(localStorage.getItem("hotels"));
@@ -82,7 +83,7 @@ function submitReviewButtonPressed() {
 
 
 }
-
+// Check if one of the users in localstorage is logged in
 function loggedIn() {
     var users = JSON.parse(localStorage.getItem("users"));
     if (users) {

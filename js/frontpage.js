@@ -21,7 +21,7 @@ function deletePreferenceButtonPressed(element) {
   var parent = element.parentNode;
   container.removeChild(parent);
 }
-
+//Press the searchbutton which will go to the searchResults.html
 function searchButtonPressed() {
   window.parent.postMessage('searchButtonPressed', '*');
 }

@@ -1,7 +1,9 @@
+//Form submit on clicking login. Checking to see if the username/password is correct
+// Localstorage is updated and then redirecting to frontpage
 function onFormSubmit() {
   var user = $('#form__login')
     .serializeArray()
-    .reduce(function(obj, item) {
+    .reduce(function (obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
@@ -9,7 +11,7 @@ function onFormSubmit() {
   var users = JSON.parse(localStorage.getItem('users'));
   var shouldRedirect = false;
   if (users) {
-    var updatedUsers = users.map(function(userMap) {
+    var updatedUsers = users.map(function (userMap) {
       if (
         user.username == userMap.username &&
         user.password == userMap.password

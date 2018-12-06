@@ -1,3 +1,5 @@
+//If localStorage doesn't have any hotels, this is the hotels that are added.
+//If any changes are made here, make sure to clear the localstorage
 const hotels = [
     {
         id: 0,
@@ -139,7 +141,7 @@ const hotels = [
         }]
     },
 ];
-
+//Clicking on a hotel takes you to the detailView
 function containerItemPressed(e, i) {
     e = e || window.event;
     var target = e.target || e.srcElement;
@@ -150,7 +152,7 @@ function containerItemPressed(e, i) {
         window.parent.postMessage('goToDetailView', '*');
     }
 };
-
+//Clicking on the "star" to favorite a hotel. Will save the hotel as a favorite for the current loggedIn user
 function favoriteContainerPressed(element, i) {
     changeFavoriteImage(element);
 
@@ -175,10 +177,14 @@ function favoriteContainerPressed(element, i) {
 }
 
 $(document).ready(function () {
+    //Set the hotels in localstorage if it's empty
     if (localStorage.getItem("hotels") == null) {
         localStorage.setItem("hotels", JSON.stringify(hotels));
     }
+    //Initialize search JQuery plugin (the empty search is implemented inside the plugin)
     $(".search__field").search();
+
+    //Get hotels from localstorage and present them with Jquery. Data-search is for the search param
     var hotelsLocalStorage = JSON.parse(localStorage.getItem("hotels"));
     for (i = 0; i < hotelsLocalStorage.length; i++) {
         var image = hotelsLocalStorage[i].image;
@@ -201,14 +207,15 @@ $(document).ready(function () {
     }
 });
 
+//Hovering the favorite button
 function hover(element) {
     changeFavoriteImage(element);
 }
-
+//Hovering the favorite button
 function unhover(element) {
     changeFavoriteImage(element);
 }
-
+//Change favoriteImage on hover to filled/not-filled
 function changeFavoriteImage(element) {
     if (element.getElementsByTagName('img')[0].getAttribute('src') === '../images/icons/star.png') {
         element.getElementsByTagName('img')[0].setAttribute('src', '../images/icons/star_filled.png');
@@ -216,7 +223,7 @@ function changeFavoriteImage(element) {
         element.getElementsByTagName('img')[0].setAttribute('src', '../images/icons/star.png');
     }
 }
-
+//Check if user is logged in
 function loggedIn() {
     var users = JSON.parse(localStorage.getItem("users"));
     if (users) {
@@ -229,7 +236,7 @@ function loggedIn() {
     }
     return loggedIn;
 }
-
+//Get the currently logged in user
 function getUser() {
     var users = JSON.parse(localStorage.getItem("users"));
     if (users) {
@@ -242,7 +249,7 @@ function getUser() {
     }
     return returnUser;
 }
-
+//Check if "i" is favorite for the currently logged in user
 function isFavorite(i) {
     if (loggedIn()) {
         var user = getUser();

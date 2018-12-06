@@ -1,3 +1,4 @@
+//On submitting for, a new user is created and added to localStorage
 function onFormSubmit() {
   var user = $("#form__register")
     .serializeArray()
@@ -23,7 +24,7 @@ function onFormSubmit() {
     saveUser(user);
   }
 }
-
+//User saved in localstorage
 function saveUser(user) {
   var users = JSON.parse(localStorage.getItem("users"));
   if (!users) {
@@ -35,8 +36,4 @@ function saveUser(user) {
   localStorage.setItem("users", JSON.stringify(users));
 
   window.parent.postMessage("message", "*");
-}
-
-function deleteButtonPressed() {
-  $("#form__register").trigger("reset");
 }

@@ -1,9 +1,10 @@
+//Update buttons and show the frontpage 
 $(document).ready(function () {
   updateButtons();
   logoButtonPressed();
-  updateProfile();
 });
 
+//Log the user in
 function loggedIn() {
   var users = JSON.parse(localStorage.getItem("users"));
   if (users) {
@@ -17,6 +18,7 @@ function loggedIn() {
   return loggedIn;
 }
 
+//Log the user out
 function logout() {
   var users = JSON.parse(localStorage.getItem("users"));
   if (users) {
@@ -34,6 +36,7 @@ function logout() {
   }
 }
 
+//Update buttons in navbar based on if the user is logged in or not 
 function updateButtons() {
   if (loggedIn()) {
     var registerButton = document.getElementById("register__button");
@@ -54,11 +57,13 @@ function updateButtons() {
   }
 }
 
+//Go to profile and update the favorites if there has been any change
 function profileButtonPressed() {
   showPage("content__container__profile");
   updateFavorites();
 }
 
+//Listening to messages from iframes to switch pages or other functionality
 window.addEventListener("message", function (event) {
   if (event.data == "searchButtonPressed") {
     showPage("content__container__searchResults");
@@ -73,14 +78,7 @@ window.addEventListener("message", function (event) {
   }
 });
 
-window.addEventListener("login", function (event) {
-  if (loggedIn()) {
-    logoButtonPressed();
-    window.location.reload(true);
-  }
-});
-
-
+//Hide every iframe
 function hideEveryPage() {
   var contentRegister = document.getElementById("content__container__register");
   var contentLogin = document.getElementById("content__container__login");
@@ -103,20 +101,18 @@ function hideEveryPage() {
   policies.style.display = "none";
 
 }
-
+//Show the specified iframe based on id
 function showPage(pageID) {
   hideEveryPage();
   document.getElementById(pageID).style.display = "flex";
 }
 
+//Go to the frontpage after pressing the logo on the top left
 function logoButtonPressed() {
-  if (loggedIn()) {
-    showPage("content__container__frontpage");
-  } else {
-    showPage("content__container__frontpage");
-  }
+  showPage("content__container__frontpage");
 }
 
+//Log in or log out
 function loginLogoutButtonPressed() {
   if (loggedIn()) {
     logout();
@@ -126,18 +122,19 @@ function loginLogoutButtonPressed() {
   updateButtons();
 }
 
+//Go to the register page
 function registerButtonPressed() {
   showPage("content__container__register");
 }
-
+//Go to the policy page
 function policyButtonPressed() {
   showPage("content__container__policies");
 }
-
+//Go to the help page
 function helpButtonPressed() {
   showPage("content__container__help");
 }
-
+//Go to the about page
 function aboutButtonPressed() {
   showPage("content__container__aboutUs");
 }
@@ -165,31 +162,3 @@ function deletePreferenceButtonPressed(element) {
   container.removeChild(parent);
 }
 
-function updateProfile() {
-
-  // var name = document.getElementById("profile__header");
-  // var text = document.getElementById("personal__information__text");
-  // var image = document.getElementById("profile__img");
-  // var image2 = document.getElementById("profile__img2");
-
-  // var users = JSON.parse(localStorage.getItem("users"));
-  // if (users) {
-  //   users.forEach(function (user) {
-  //     if (user.loggedIn) {
-  //       if (user.image) {
-  //         image.src = user.image;
-  //         image2.src = user.image;
-  //       } else {
-  //         image.src = "images/profile.svg";
-  //         image2.src = "images/profile.svg";
-  //       }
-  //       name.innerHTML = user.firstName + " " + user.lastName;
-  //       text.innerHTML =
-  //         user.firstName +
-  //         " " +
-  //         user.lastName +
-  //         " is a renowned restaurant reviewer from Spain. His favorite restaurants are McDonald's and Burger King. Member since 2015.";
-  //     }
-  //   });
-  // }
-}
