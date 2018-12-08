@@ -1,10 +1,22 @@
 @import 'global.css';
-.Policies__main__container {
+body {
+  background-image: url("../images//frontpage/background.svg");
+}
+
+.policies__main__container {
   display: flex;
-  background-color: #fcfcfc;
-  justify-content: center;
-  align-items: center;  
-  padding-top: 100px;    
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.policies__main__container__subheader {
+  padding: 30px 20px 20px 20px;
+}
+
+.policies__main__container__link {
+  color: var(--main-color);
+  padding: 20px;
+  font-size: 18px;
 }
 
 .main__content {
@@ -21,13 +33,16 @@
 .main__content__input__container {
   padding: 20px;
 }
+
 .main__content__header {
-    padding: 20px;
-    padding-bottom: 0px;
+  padding: 20px;
+  padding-bottom: 0px;
 }
-.content__container{
-    padding: 20px;
+
+.content__container {
+  padding: 20px;
 }
-.default_content_information{
-    color: gray;
+
+.default_content_information {
+  color: gray;
 }

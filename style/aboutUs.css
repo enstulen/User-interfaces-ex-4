@@ -1,9 +1,12 @@
 @import 'global.css';
+body {
+  background-image: url("../images//frontpage/background.svg");
+}
+
 .AboutUs__main__container {
   display: flex;
-  background-color: #fcfcfc;
   justify-content: center;
-  align-items: center;      
+  align-items: center;
   padding-top: 100px;
 }
 
@@ -21,13 +24,16 @@
 .main__content__input__container {
   padding: 20px;
 }
+
 .main__content__header {
-    padding: 20px;
-    padding-bottom: 0px;
+  padding: 20px;
+  padding-bottom: 0px;
 }
-.content__container{
-    padding: 20px;
+
+.content__container {
+  padding: 20px;
 }
-.default_content_information{
-    color: gray;
+
+.default_content_information {
+  color: gray;
 }
